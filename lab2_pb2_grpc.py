@@ -5,7 +5,7 @@ import grpc
 import lab2_pb2 as lab2__pb2
 
 
-class Order_VectorStub(object):
+class OrderVectorStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -14,42 +14,42 @@ class Order_VectorStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Order_Vector = channel.unary_unary(
-                '/Order_Vector/Order_Vector',
+        self.OrderVector = channel.unary_unary(
+                '/OrderVector/OrderVector',
                 request_serializer=lab2__pb2.Request.SerializeToString,
                 response_deserializer=lab2__pb2.Response.FromString,
                 )
 
 
-class Order_VectorServicer(object):
+class OrderVectorServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def Order_Vector(self, request, context):
+    def OrderVector(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_Order_VectorServicer_to_server(servicer, server):
+def add_OrderVectorServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Order_Vector': grpc.unary_unary_rpc_method_handler(
-                    servicer.Order_Vector,
+            'OrderVector': grpc.unary_unary_rpc_method_handler(
+                    servicer.OrderVector,
                     request_deserializer=lab2__pb2.Request.FromString,
                     response_serializer=lab2__pb2.Response.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'Order_Vector', rpc_method_handlers)
+            'OrderVector', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class Order_Vector(object):
+class OrderVector(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def Order_Vector(request,
+    def OrderVector(request,
             target,
             options=(),
             channel_credentials=None,
@@ -59,7 +59,7 @@ class Order_Vector(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/Order_Vector/Order_Vector',
+        return grpc.experimental.unary_unary(request, target, '/OrderVector/OrderVector',
             lab2__pb2.Request.SerializeToString,
             lab2__pb2.Response.FromString,
             options, channel_credentials,

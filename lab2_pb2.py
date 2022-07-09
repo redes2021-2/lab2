@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x01(\x05\";\n\x08Response\x12\x16\n\x0e\x62iggest_number\x18\x01 \x01(\x05\x12\x17\n\x0fsmallest_number\x18\x02 \x01(\x05\x32\x33\n\x0cOrder_Vector\x12#\n\x0cOrder_Vector\x12\x08.Request\x1a\t.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x01(\x05\"(\n\x08Response\x12\r\n\x05maior\x18\x01 \x01(\x05\x12\r\n\x05menor\x18\x02 \x01(\x05\x32\x31\n\x0bOrderVector\x12\"\n\x0bOrderVector\x12\x08.Request\x1a\t.Responseb\x06proto3')
 
 
 
@@ -34,14 +34,14 @@ Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Messag
   })
 _sym_db.RegisterMessage(Response)
 
-_ORDER_VECTOR = DESCRIPTOR.services_by_name['Order_Vector']
+_ORDERVECTOR = DESCRIPTOR.services_by_name['OrderVector']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _REQUEST._serialized_start=14
   _REQUEST._serialized_end=39
   _RESPONSE._serialized_start=41
-  _RESPONSE._serialized_end=100
-  _ORDER_VECTOR._serialized_start=102
-  _ORDER_VECTOR._serialized_end=153
+  _RESPONSE._serialized_end=81
+  _ORDERVECTOR._serialized_start=83
+  _ORDERVECTOR._serialized_end=132
 # @@protoc_insertion_point(module_scope)

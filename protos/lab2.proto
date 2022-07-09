@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-service Order_Vector {
-    rpc Order_Vector(Request) returns(Response);
+service OrderVector {
+    rpc OrderVector(Request) returns(Response);
 }
 
 message Request {
@@ -9,6 +9,6 @@ message Request {
 }
 
 message Response {
-    int32 biggest_number = 1;
-    int32 smallest_number = 2;
+    int32 maior = 1;
+    int32 menor = 2;
 }
