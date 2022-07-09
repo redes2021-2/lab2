@@ -4,6 +4,7 @@ import lab2_pb2
 import lab2_pb2_grpc
 from concurrent import futures
 import random
+from math import sqrt
 
 
 def run():
@@ -14,5 +15,8 @@ def run():
         for i in range(len(vector)):
             vector[i] = (i - random.randint(0, 500000)/2) ** 2
             vector[i] = sqrt(vector[i])
-        response = stub.Order_Vector(lab2_pb2.Request(vector))
+        response = stub.OrderVector(lab2_pb2.Request(vector=vector))
         print("Received response: " + response.maior + " " + response.menor)
+
+
+run()

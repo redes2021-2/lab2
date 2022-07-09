@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x03(\x02\"(\n\x08Response\x12\r\n\x05maior\x18\x01 \x01(\x02\x12\r\n\x05menor\x18\x02 \x01(\x02\x32\x31\n\x0bOrderVector\x12\"\n\x0bOrderVector\x12\x08.Request\x1a\t.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x03(\x02\"(\n\x08Response\x12\r\n\x05maior\x18\x01 \x01(\x02\x12\r\n\x05menor\x18\x02 \x01(\x02\x32\x33\n\x0bOrderVector\x12$\n\x0bOrderVector\x12\x08.Request\x1a\t.Response\"\x00\x62\x06proto3')
 
 
 
@@ -43,5 +43,5 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _RESPONSE._serialized_start=41
   _RESPONSE._serialized_end=81
   _ORDERVECTOR._serialized_start=83
-  _ORDERVECTOR._serialized_end=132
+  _ORDERVECTOR._serialized_end=134
 # @@protoc_insertion_point(module_scope)
