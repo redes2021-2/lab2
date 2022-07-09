@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Order_Vector {
+    rpc Order_Vector(Request) returns(Response);
+}
+
+message Request {
+    int32 vector = 1;
+}
+
+message Response {
+    int32 biggest_number = 1;
+    int32 smallest_number = 2;
+}
