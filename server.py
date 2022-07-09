@@ -7,14 +7,13 @@ from concurrent import futures
 
 class OrderVectorServicer(lab2_pb2_grpc.OrderVectorServicer):
     def Order_Vector(self, request, context):
-        print("Received request: " + request.vector)
+        response = lab2_pb2.Response()
+        ordVector = sort(request.vector)
+        response.maior = ordVector[-1]
+        response.menor = ordVector[0]
 
-        # order the vector
-        vector = request.vector.split(',')
-        vector.sort()
-        vector = ','.join(vector)
-        print("Sending response: " + vector)
-        return lab2_pb2.Response(vector=vector)
+        print("Sending response: " + response)
+        return response
 
 
 def main():

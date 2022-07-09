@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x01(\x05\"(\n\x08Response\x12\r\n\x05maior\x18\x01 \x01(\x05\x12\r\n\x05menor\x18\x02 \x01(\x05\x32\x31\n\x0bOrderVector\x12\"\n\x0bOrderVector\x12\x08.Request\x1a\t.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nlab2.proto\"\x19\n\x07Request\x12\x0e\n\x06vector\x18\x01 \x03(\x02\"(\n\x08Response\x12\r\n\x05maior\x18\x01 \x01(\x02\x12\r\n\x05menor\x18\x02 \x01(\x02\x32\x31\n\x0bOrderVector\x12\"\n\x0bOrderVector\x12\x08.Request\x1a\t.Responseb\x06proto3')
 
 
 

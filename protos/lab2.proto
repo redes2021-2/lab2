@@ -5,10 +5,10 @@ service OrderVector {
 }
 
 message Request {
-    int32 vector = 1;
+    repeated float vector = 1;
 }
 
 message Response {
-    int32 maior = 1;
-    int32 menor = 2;
+    float maior = 1;
+    float menor = 2;
 }
