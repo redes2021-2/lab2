@@ -1,22 +1,26 @@
 import grpc
-import time
 import lab2_pb2
 import lab2_pb2_grpc
-from concurrent import futures
-import random
 from math import sqrt
+import random
+
+tam_max = 500000
+
+
+def randomizer(i):
+    return (i - (random.randint(0, tam_max) / 2))**2
 
 
 def run():
-    channel = grpc.insecure_channel('localhost:50051')
-    stub = lab2_pb2_grpc.OrderVectorStub(channel)
-    # create random vector of 500k elements
-    vector = [0] * 500000
-    for i in range(len(vector)):
-        vector[i] = (i - random.randint(0, 500000)/2) ** 2
-        vector[i] = sqrt(vector[i])
-    response = stub.OrderVector(lab2_pb2.Request(vector=vector))
-    print("Received response: " + response.maior + " " + response.menor)
+    with grpc.insecure_channel('localhost:50051') as channel:
+        stub = lab2_pb2_grpc.OrderVectorStub(channel)
+        # create 500k vector with random numbers
+        vector = [sqrt(randomizer(i)) for i in range(tam_max)]
+        response = stub.OrderVector(lab2_pb2.Request(
+            vector=vector))
+        print('maior:', response.maior)
+        print('menor:', response.menor)
 
 
-run()
+if __name__ == '__main__':
+    run()
